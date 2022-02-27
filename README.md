@@ -1,1 +1,2 @@
 - A nova convenção é colocar o `<template>` **após** a tag script
+- Um dos princípios do Typescript é to let Type Inference take care of the typing and only step in when type inference is not enough

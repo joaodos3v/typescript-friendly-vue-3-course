@@ -1,16 +1,31 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
+import fetchCount from './fetchCount';
 
-// Because Type Inference, we didn't have to to set an explicit type on this variable
-const count = ref(0);
+// Note: this interface is for make our code more readable
+interface AppInfo {
+  name: string;
+  slogan: string;
+}
 
-const appInfo = reactive({
+// Note: w/ fetchCount example, we saw wront Type Inference (and force manually the correct way)
+const count = ref<number | null>(null);
+
+const appInfo: AppInfo = reactive({
   name: 'Counter',
   slogan: 'an app you can count on',
 });
 
+onMounted(() => {
+  fetchCount((initialCount) => {
+    count.value = initialCount;
+  });
+});
+
 function add() {
-  count.value += 1;
+  if (count.value !== null) {
+    count.value += 1;
+  }
 }
 </script>
 
