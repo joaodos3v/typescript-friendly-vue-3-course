@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
-import Counter from './components/Counter.vue';
+import CustomCounter from './components/CustomCounter.vue';
 
 // Note: this interface is for make our code more readable
 interface AppInfo {
@@ -20,5 +20,5 @@ const appInfo: AppInfo = reactive({
     <h1>{{ appInfo.name }}</h1>
     <h2>{{ appInfo.slogan }}</h2>
   </div>
-  <counter :limit="10" />
+  <custom-counter :limit="10" />
 </template>
