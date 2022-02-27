@@ -17,3 +17,7 @@
   - `defineProps`
   - `withDefaults`
   - `defineEmits`
+
+- As principais diferenças de Vue.js e React.js no suporte para TS são:
+  - Philosophy: **React.js** => Maximun Native Language Features | **Vue.js** => Framework-Level Compilers
+  - Strength: **React.js** => Small API | **Vue.js** => User-Friendly API
