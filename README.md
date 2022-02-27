@@ -12,3 +12,8 @@
 - Para fazer uma prop como opcional, this will be a two step process:
   - Use question mark
   - Use `withDefaults`
+
+- Compiler macros highlight:
+  - `defineProps`
+  - `withDefaults`
+  - `defineEmits`
