@@ -9,3 +9,6 @@
   - _Compiler macros_ are functions that only get executed in compile-time
   - Also, no need to be imported
   - And, the most important thing: the compiler macro can be used only within the script setup block
+- Para fazer uma prop como opcional, this will be a two step process:
+  - Use question mark
+  - Use `withDefaults`

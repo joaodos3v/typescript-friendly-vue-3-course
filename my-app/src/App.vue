@@ -20,5 +20,5 @@ const appInfo: AppInfo = reactive({
     <h1>{{ appInfo.name }}</h1>
     <h2>{{ appInfo.slogan }}</h2>
   </div>
-  <counter :limit="10" :alert-message-on-limit="'can not go any higher'" />
+  <counter :limit="10" />
 </template>

@@ -4,10 +4,12 @@ import fetchCount from '../services/fetchCount';
 
 interface Props {
   limit: number;
-  alertMessageOnLimit: string;
+  alertMessageOnLimit?: string;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  alertMessageOnLimit: 'can not go any higher',
+});
 
 /**
  * Note: props can be received like Vue 2 too insteaf of Pure Typescript Annotation:
