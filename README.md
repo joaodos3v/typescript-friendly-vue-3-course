@@ -1,0 +1,1 @@
+- A nova convenção é colocar o `<template>` **após** a tag script
